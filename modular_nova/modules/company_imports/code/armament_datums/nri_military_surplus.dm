@@ -118,6 +118,12 @@
 	cost = PAYCHECK_COMMAND * 14
 	restricted = TRUE
 
+/datum/armament_entry/company_import/nri_surplus/firearm/zver
+	item_type = /obj/item/gun/ballistic/automatic/zver
+	contraband = TRUE
+	cost = PAYCHECK_COMMAND * 15
+	restricted = TRUE
+
 /datum/armament_entry/company_import/nri_surplus/firearm/anti_materiel_rifle
 	item_type = /obj/item/gun/ballistic/automatic/wylom
 	contraband = TRUE
