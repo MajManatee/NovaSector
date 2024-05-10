@@ -146,10 +146,16 @@
 	desc = "A bulky machinegun, firing the standard .310 Strilka loaded into special 'dinner plate' magazines. The caseless ammunition \
 	results in a slower fire rate. "
 
-	icon_state = ""
-	worn_icon_state = ""
-	inhand_icon_state = ""
+	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/szot_dynamica/guns_48.dmi'
+	icon_state = "zver"
 
+	worn_icon = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_worn.dmi'
+	worn_icon_state = "zver"
+
+	lefthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_lefthand.dmi'
+	righthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_righthand.dmi'
+	inhand_icon_state = "zver"
+	
 	bolt_type = BOLT_TYPE_OPEN
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/zver
@@ -195,7 +201,9 @@
 	nature of the caseless ammunition meant that more rounds could be fit into a more \
 	compact space, but noticably limited the rate at which the rifle could cycle. On \
 	the upside, the slower rate of fire meant that it could be held more accurately on \
-	target, although it is still far less accurate than its single shot counterparts."
+	target, although it is still far less accurate than its single shot counterparts. \
+	Despite what the name might imply, it's no heavier nor more powerful than the Lanca \
+	rifle that it shares its ammunition with."
 
 	return .
 
