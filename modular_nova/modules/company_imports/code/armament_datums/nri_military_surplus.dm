@@ -161,6 +161,7 @@
 /datum/armament_entry/company_import/nri_surplus/firearm_ammo/zver
 	item_type = /obj/item/ammo_box/magazine/zver/spawns_empty
 	contraband = TRUE
+		cost = PAYCHECK_CREW * 2
 
 /datum/armament_entry/company_import/nri_surplus/firearm_ammo/varri
 	item_type = /obj/item/ammo_box/magazine/varri/spawns_empty
