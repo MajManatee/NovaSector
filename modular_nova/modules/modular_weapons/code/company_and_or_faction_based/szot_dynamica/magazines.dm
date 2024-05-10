@@ -98,7 +98,6 @@
 	name = "varri magazine (12g buckshot slugs)"
 	desc = "A small five round, twelve gauge magazine."
 	icon_state = "varri"
-	base_icon_state = "varri"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	caliber = CALIBER_SHOTGUN
 	max_ammo = 5
