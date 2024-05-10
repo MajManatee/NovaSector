@@ -89,3 +89,18 @@
 
 /obj/item/ammo_box/magazine/zver/spawns_empty
 	start_empty = TRUE
+
+// Magazine for the Varri shotgun.
+
+/obj/item/ammo_box/magazine/varri
+	name = "varri magazine (12g buckshot slugs)"
+	desc = "A small five round, twelve gauge magazine."
+	icon_state = "varri"
+	base_icon_state = "varri"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	caliber = CALIBER_SHOTGUN
+	max_ammo = 5
+	casing_phrasing = "shell"
+
+/obj/item/ammo_box/magazine/varri/spawns_empty
+	start_empty = TRUE

@@ -155,7 +155,7 @@
 	lefthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_lefthand.dmi'
 	righthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_righthand.dmi'
 	inhand_icon_state = "zver"
-	
+
 	bolt_type = BOLT_TYPE_OPEN
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/zver
@@ -203,7 +203,8 @@
 	the upside, the slower rate of fire meant that it could be held more accurately on \
 	target, although it is still far less accurate than its single shot counterparts. \
 	Despite what the name might imply, it's no heavier nor more powerful than the Lanca \
-	rifle that it shares its ammunition with."
+	rifle that it shares its ammunition with. The name was originally derrived from the \
+	old-earth serbians word for 'Beast'."
 
 	return .
 

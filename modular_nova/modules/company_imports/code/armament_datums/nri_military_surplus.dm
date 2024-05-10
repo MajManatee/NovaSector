@@ -112,6 +112,12 @@
 	item_type = /obj/item/gun/ballistic/rifle/boltaction
 	cost = PAYCHECK_COMMAND * 12
 
+/datum/armament_entry/company_import/nri_surplus/firearm/varri
+	item_type = /obj/item/gun/ballistic/shotgun/varri
+	contraband = TRUE
+	cost = PAYCHECK_COMMAND * 13
+	restricted = TRUE
+
 /datum/armament_entry/company_import/nri_surplus/firearm/lanca
 	item_type = /obj/item/gun/ballistic/automatic/lanca
 	contraband = TRUE
@@ -151,3 +157,11 @@
 	item_type = /obj/item/ammo_box/magazine/wylom
 	contraband = TRUE
 	cost = PAYCHECK_CREW * 3
+
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/zver
+	item_type = /obj/item/ammo_box/magazine/zver/spawns_empty
+	contraband = TRUE
+
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/varri
+	item_type = /obj/item/ammo_box/magazine/varri/spawns_empty
+	contraband = TRUE
