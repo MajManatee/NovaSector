@@ -1,4 +1,4 @@
-// Semi-automatic, Magazine fed shotgun. Small mags, and unique! (among station weapons)
+// Varri Shotgun. A Semi-automatic, Magazine fed weapon with small mags, and its unique! (among station weapons)
 
 /obj/item/gun/ballistic/shotgun/varri
 	name = "\improper Varri semi-automatic shotgun"
@@ -55,3 +55,8 @@
 
 /obj/item/gun/ballistic/shotgun/varri/no_mag
 	spawnwithmagazine = FALSE
+
+// Musor Shotgun. A Bolt-action, Magazine fed weapon with tiny two round mags
+
+
+BOLT_TYPE_LOCKING 
