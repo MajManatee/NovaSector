@@ -137,3 +137,67 @@
 		tend to shatter when the rifle is actually fired."
 
 	return .
+
+// Zver Heavy Machine Gun
+// Fires .310 Strilka, faster than the lanca but slower than the Quarad.
+
+/obj/item/gun/ballistic/automatic/zver
+	name = "\improper Zver Heavy Machinegun"
+	desc = "A bulky machinegun, firing the standard .310 Strilka loaded into special 'dinner plate' magazines. The caseless ammunition \
+	results in a slower fire rate. "
+
+	icon_state = ""
+	worn_icon_state = ""
+	inhand_icon_state = ""
+
+	bolt_type = BOLT_TYPE_OPEN
+
+	accepted_magazine_type = /obj/item/ammo_box/magazine/zver
+
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = ITEM_SLOT_BACK
+
+	fire_sound = ''
+	suppressed_sound = ''
+
+	can_suppress = FALSE
+	can_bayonet = FALSE
+
+	burst_size = 1
+	fire_delay = 0.4 SECONDS
+	actions_types = list()
+
+	recoil = 1
+	spread = 10
+	projectile_wound_bonus = -20
+
+/obj/item/gun/ballistic/automatic/zver/Initialize(mapload)
+	. = ..()
+
+	give_autofire()
+
+/obj/item/gun/ballistic/automatic/zver/proc/give_autofire()
+	AddComponent(/datum/component/automatic_fire, fire_delay)
+
+/obj/item/gun/ballistic/automatic/zver/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_SZOT)
+
+/obj/item/gun/ballistic/automatic/zver/examine(mob/user)
+	. = ..()
+	. += span_notice("You can <b>examine closer</b> to learn a little more about this weapon.")
+
+/obj/item/gun/ballistic/automatic/zver/examine_more(mob/user)
+	. = ..()
+
+	. += "The 'Zver' heavy machinegun was manufactured to help infantry handle large \
+	groups that the standard semi-automatic and bolt-action rifes struggled against. The \
+	nature of the caseless ammunition meant that more rounds could be fit into a more \
+	compact space, but noticably limited the rate at which the rifle could cycle. On \
+	the upside, the slower rate of fire meant that it could be held more accurately on \
+	target, although it is still far less accurate than its single shot counterparts."
+
+	return .
+
+/obj/item/gun/ballistic/automatic/zver/no_mag
+	spawnwithmagazine = FALSE

@@ -71,3 +71,21 @@
 	ammo_type = /obj/item/ammo_casing/p60strela
 	max_ammo = 3
 	caliber = CALIBER_60STRELA
+
+// Zver plate magazine
+
+/obj/item/ammo_box/magazine/zver
+	name = "\improper Zver heavy machinegun magazine"
+	desc = "A standard 'dinner plate' magazine for Zver heavy machinegun, holding thirty seven rounds."
+
+	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/szot_dynamica/ammo.dmi'
+	icon_state = "zver_mag"
+
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+	ammo_type = /obj/item/ammo_casing/strilka310
+	caliber = CALIBER_STRILKA310
+	max_ammo = 37
+
+/obj/item/ammo_box/magazine/zver/spawns_empty
+	start_empty = TRUE
