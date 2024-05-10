@@ -83,9 +83,11 @@
 
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
+	w_class = WEIGHT_CLASS_NORMAL
+
 	ammo_type = /obj/item/ammo_casing/strilka310
 	caliber = CALIBER_STRILKA310
-	max_ammo = 37
+	max_ammo = 37  // Not chosen randomly, the real world weapon (DP-28) has a 47 round plate.
 
 /obj/item/ammo_box/magazine/zver/spawns_empty
 	start_empty = TRUE
@@ -101,6 +103,7 @@
 	caliber = CALIBER_SHOTGUN
 	max_ammo = 5
 	casing_phrasing = "shell"
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/magazine/varri/spawns_empty
 	start_empty = TRUE
