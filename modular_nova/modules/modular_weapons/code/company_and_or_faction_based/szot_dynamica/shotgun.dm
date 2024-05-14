@@ -58,5 +58,56 @@
 
 // Musor Shotgun. A Bolt-action, Magazine fed weapon with tiny two round mags
 
+/obj/item/gun/ballistic/shotgun/musor
+	name = "\improper Musor bolt-action shotgun"
+	desc = "A twelve gauge, magazine fed, bolt-action shotgun. Sturdy and reliable, yet cheap and mass produced."
 
-BOLT_TYPE_LOCKING 
+	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/szot_dynamica/guns_48.dmi'
+	icon_state = "musor"
+
+	worn_icon = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_worn.dmi'
+	worn_icon_state = "musor"
+
+	lefthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_lefthand.dmi'
+	righthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_righthand.dmi'
+	inhand_icon_state = "musor"
+
+	accepted_magazine_type = /obj/item/ammo_box/magazine/musor
+
+	can_bayonet = FALSE
+	internal_magazine = FALSE
+	mag_display = TRUE
+	can_be_sawn_off = FALSE
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_MEDIUM
+	slot_flags = ITEM_SLOT_BELT
+	bolt_wording = "bolt"
+	bolt_type = BOLT_TYPE_LOCKING
+	semi_auto = FALSE
+	fire_sound = 'sound/weapons/gun/rifle/shot_heavy.ogg'
+	rack_sound = 'sound/weapons/gun/rifle/bolt_out.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/rifle/bolt_in.ogg'
+
+	SET_BASE_PIXEL(0, 0)
+
+/obj/item/gun/ballistic/shotgun/musor/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_SZOT)
+
+/obj/item/gun/ballistic/shotgun/musor/examine(mob/user)
+	. = ..()
+	. += span_notice("You can <b>examine closer</b> to learn a little more about this weapon.")
+
+/obj/item/gun/ballistic/shotgun/musor/examine_more(mob/user)
+	. = ..()
+
+	. += "The Musor is a relic of a bygone age, where bolt action \
+	was seen as the most reliable way to chamber a weapon. It made \
+	sure that the weapon wouldnt fire when you opened the bolt, and \
+	allowed for the easiest field stripping and maintnence. Nowadays, \
+	manufacturers assume you have a whole toolkit with gun oil and \
+	everything, but this weapon stays true to its roots. Hard hitting, \
+	reliable, a bit ugly and often dismissed for its small capacity. \
+	those who doubt its power are often the ones found dead, and remembering \
+	that it takes one pellet to put you down at the end of the day."
+
+	return .
