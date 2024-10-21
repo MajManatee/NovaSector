@@ -309,7 +309,12 @@
 		baked_item.fire_act(1000) // Overcooked food really does burn, hot hot hot!
 
 		if(SPT_PROB(10, seconds_per_tick))
-			visible_message(span_danger("You smell a burnt smell coming from [src]!")) // Give indication that something is burning in the oven
+			var/list/asomnia_havers = get_hearers_in_view(DEFAULT_MESSAGE_RANGE, src)
+			for(var/mob/cannot_smell in asomnia_havers)
+				if(!HAS_TRAIT(cannot_smell, TRAIT_ANOSMIA))
+					asomnia_havers -= cannot_smell
+			visible_message(span_danger("You smell a burnt smell coming from [src]!"), ignored_mobs = asomnia_havers)
+			// Give indication that something is burning in the oven
 	set_smoke_state(worst_cooked_food_state)
 
 /// Sets the type of particles that the forge should be generating
@@ -416,7 +421,7 @@
 			minimum_target_temperature = 25 // This won't matter except in a few cases here, but we still need to cover those few cases
 			forge_level = FORGE_LEVEL_LEGENDARY
 
-	playsound(src, 'sound/weapons/parry.ogg', 50, TRUE) // Play a feedback sound to really let players know we just did an upgrade
+	playsound(src, 'sound/items/weapons/parry.ogg', 50, TRUE) // Play a feedback sound to really let players know we just did an upgrade
 
 /obj/structure/reagent_forge/attackby(obj/item/attacking_item, mob/living/user, params)
 	if(!used_tray && istype(attacking_item, /obj/item/plate/oven_tray))
@@ -610,7 +615,7 @@
 	attacking_weapon.color = mix_color_from_reagents(attacking_weapon.reagents.reagent_list)
 	balloon_alert_to_viewers("imbued [attacking_weapon]")
 	user.mind.adjust_experience(/datum/skill/smithing, 60)
-	playsound(src, 'sound/magic/demon_consume.ogg', 50, TRUE)
+	playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	in_use = FALSE
 	return TRUE
 
@@ -660,7 +665,7 @@
 	attacking_clothing.color = mix_color_from_reagents(attacking_clothing.reagents.reagent_list)
 	balloon_alert_to_viewers("imbued [attacking_clothing]")
 	user.mind.adjust_experience(/datum/skill/smithing, 60)
-	playsound(src, 'sound/magic/demon_consume.ogg', 50, TRUE)
+	playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	in_use = FALSE
 	return TRUE
 
@@ -832,6 +837,11 @@
 	// Here we check the item used on us (tongs) for an incomplete forge item of some kind to heat
 	var/obj/item/forging/incomplete/search_incomplete = locate(/obj/item/forging/incomplete) in forge_item.contents
 	if(search_incomplete)
+		if(!COOLDOWN_FINISHED(search_incomplete, heating_remainder))
+			fail_message(user, "metal doesn't need heating")
+			forge_item.in_use = FALSE
+			return ITEM_INTERACT_SUCCESS
+
 		balloon_alert_to_viewers("heating [search_incomplete]")
 
 		if(!do_after(user, skill_modifier * forge_item.toolspeed, target = src))

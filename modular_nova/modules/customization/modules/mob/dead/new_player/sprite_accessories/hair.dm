@@ -195,6 +195,10 @@
 	name = "Simple Ponytail"
 	icon_state = "hair_simple_ponytail"
 
+/datum/sprite_accessory/hair/nova/simple_ponytail_alt
+	name = "Simple Ponytail Alt"
+	icon_state = "hair_simple_ponytail_alt"
+
 /datum/sprite_accessory/hair/nova/loose_slicked
 	name = "Loose Slicked"
 	icon_state = "hair_loose_slicked"
@@ -202,6 +206,10 @@
 /datum/sprite_accessory/hair/nova/diagonal_bangs
 	name = "Diagonal Bangs"
 	icon_state = "hair_diagonal_bangs"
+
+/datum/sprite_accessory/hair/nova/diagonal_bangs_alt
+	name = "Diagonal Bangs Alt"
+	icon_state = "hair_diagonal_bangs_alt"
 
 /datum/sprite_accessory/hair/nova/gloomy_medium
 	name = "Medium Gloomy Bangs"
@@ -278,6 +286,10 @@
 /datum/sprite_accessory/hair/nova/cotton
 	name = "Cotton"
 	icon_state = "hair_cotton"
+
+/datum/sprite_accessory/hair/nova/cottonalt
+	name = "Cotton (Alt)"
+	icon_state = "hair_cottonalt"
 
 /datum/sprite_accessory/hair/nova/african_pigtails
 	name = "African Pigtails"
@@ -515,7 +527,7 @@
 	name = "Bonnie long 2"
 	icon_state = "hair_bonnie_2_long"
 
-/datum/sprite_accessory/hair/nova/bonie_2_short
+/datum/sprite_accessory/hair/nova/bonnie_2_short
 	name = "Bonnie short 2"
 	icon_state = "hair_bonnie_2_short"
 
@@ -526,6 +538,10 @@
 /datum/sprite_accessory/hair/nova/fluffy
 	name = "Fluffy"
 	icon_state = "hair_fluffy"
+
+/datum/sprite_accessory/hair/nova/fluffy_bangs
+	name = "Fluffy Bangs"
+	icon_state = "hair_fluffy_bangs"
 
 /datum/sprite_accessory/hair/nova/fluffy_long
 	name = "Fluffy long"
@@ -631,6 +647,14 @@
 	name = "Upwards"
 	icon_state = "hair_upwards"
 
+/datum/sprite_accessory/hair/nova/mcsqueeb
+	name = "McSqueeb"
+	icon_state = "hair_mcsqueeb"
+
+/datum/sprite_accessory/hair/nova/dreadlocks_long
+	name = "Long Dreadlocks"
+	icon_state = "hair_dreadlocks_long"
+
 // Facial hair
 
 /datum/sprite_accessory/facial_hair/nova
@@ -667,3 +691,7 @@
 /datum/sprite_accessory/facial_hair/nova/squid
 	name = "Tentacle Beard"
 	icon_state = "facial_squid"
+
+/datum/sprite_accessory/facial_hair/nova/selleckreceeded
+	name = "Moustache (Selleck - Alt)"
+	icon_state = "facial_selleckreceeded"

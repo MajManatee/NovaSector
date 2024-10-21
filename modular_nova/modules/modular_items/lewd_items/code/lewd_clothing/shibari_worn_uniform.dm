@@ -6,12 +6,12 @@
 	strip_delay = 100
 	can_adjust = FALSE
 	body_parts_covered = NONE
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION|STYLE_TAUR_ALL
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	item_flags = DROPDEL
 	greyscale_colors = "#bd8fcf"
 	has_sensor = NO_SENSORS
 
-	///Tightness of the ropes can be low, medium and hard. This var works as multiplier for arousal and pleasure recieved while wearing this item
+	///Tightness of the ropes can be low, medium and hard. This var works as multiplier for arousal and pleasure received while wearing this item
 	var/tightness = SHIBARI_TIGHTNESS_LOW
 
 	///should this clothing item use the emissive system

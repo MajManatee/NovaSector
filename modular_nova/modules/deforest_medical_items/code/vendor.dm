@@ -22,8 +22,11 @@
 				/obj/item/stack/medical/mesh = 4,
 				/obj/item/stack/medical/mesh/bloody = 2,
 				/obj/item/stack/medical/bandage = 4,
+				/obj/item/reagent_containers/pill/robotic_patch/synth_repair = 4,
 				/obj/item/stack/medical/wound_recovery = 2,
 				/obj/item/stack/medical/wound_recovery/rapid_coagulant = 2,
+				/obj/item/stack/medical/wound_recovery/robofoam = 2,
+				/obj/item/stack/medical/wound_recovery/robofoam_super = 1,
 				/obj/item/storage/pill_bottle/painkiller = 4,
 				/obj/item/storage/medkit/civil_defense/stocked = 2,
 			),
@@ -42,6 +45,8 @@
 				/obj/item/reagent_containers/hypospray/medipen/deforest/lepoturi = 3,
 				/obj/item/reagent_containers/hypospray/medipen/deforest/psifinil = 3,
 				/obj/item/reagent_containers/hypospray/medipen/deforest/halobinin = 3,
+				/obj/item/reagent_containers/hypospray/medipen/deforest/robot_system_cleaner = 3,
+				/obj/item/reagent_containers/hypospray/medipen/deforest/robot_liquid_solder = 3,
 			),
 		),
 	)
@@ -60,8 +65,13 @@
 	default_price = PAYCHECK_CREW
 	extra_price = PAYCHECK_COMMAND * 4
 	payment_department = NO_FREEBIES
-	onstation_override = 1 // No freebies if this spawns on the interlink
 
 /obj/item/vending_refill/medical_deforest
 	machine_name = "DeForest Med-Vend"
 	icon_state = "refill_medical"
+
+// No freebies if this spawns on the interlink
+/obj/machinery/vending/deforest_medvend/Initialize(mapload)
+	if(mapload && istype(get_area(src), /area/centcom/interlink))
+		all_products_free = FALSE
+	return ..()

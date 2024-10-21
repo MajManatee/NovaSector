@@ -62,6 +62,7 @@
 	. = ..()
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/rat)
 	AddElement(/datum/element/noticable_organ, "%PRONOUN_They hunch%PRONOUN_es over unnaturally!")
+	AddElement(/datum/element/update_icon_blocker)
 
 /obj/item/organ/internal/heart/rat/on_mob_insert(mob/living/carbon/receiver)
 	. = ..()
@@ -129,7 +130,7 @@
 	. = ..()
 	if(prob(5))
 		owner.emote("squeaks")
-		playsound(owner, 'sound/creatures/mousesqueek.ogg', 100)
+		playsound(owner, 'sound/mobs/non-humanoids/mouse/mousesqueek.ogg', 100)
 
 #undef RAT_ORGAN_COLOR
 #undef RAT_SCLERA_COLOR
